@@ -28,17 +28,28 @@ function playRound(humanChoice, computerChoice); {
        return "It's a tie!";
    }
    // Human loses cases
-   if (humanChoice === "rock" && computerChoice === "scissors") { 
+   if (humanChoice === "rock" && computerChoice === "paper") { 
     return "You lose! Paper beats rock.";
    }
 
-   if (humanChoice === "paper" && computerChoice === "rock") {
+   if (humanChoice === "paper" && computerChoice === "scissors") {
     return "You lose! Scissors beats paper.";
    }
 
-   if (humanChoice === "scissors" && computerChoice === "paper") {
+   if (humanChoice === "scissors" && computerChoice === "rock") {
     return "You lose! Rock beats scissors.";
    }
 
-   return "You win!";
+   // Human wins cases
+   if (humanChoice === "rock" && computerChoice === "scissors") {
+    return "You win! Rock beats scissors.";
+   }
+
+   if (humanChoice === "paper" && computerChoice === "rock") {
+    return "You win! Paper beats rock.";
+   }
+
+   if (humanChoice === "scissors" && computerChoice === "paper") {
+    return "You win! Scissors beats paper.";
+   }
 }
