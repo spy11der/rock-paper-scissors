@@ -22,3 +22,23 @@ console.log(getHumanChoice());
 let humanScore, computerScore;
 humanScore = 0;
 computerScore = 0;
+
+function playRound(humanChoice, computerChoice); {
+   if (humanChoice === computerChoice) {
+       return "It's a tie!";
+   }
+   // Human loses cases
+   if (humanChoice === "rock" && computerChoice === "scissors") { 
+    return "You lose! Paper beats rock.";
+   }
+
+   if (humanChoice === "paper" && computerChoice === "rock") {
+    return "You lose! Scissors beats paper.";
+   }
+
+   if (humanChoice === "scissors" && computerChoice === "paper") {
+    return "You lose! Rock beats scissors.";
+   }
+
+   return "You win!";
+}
